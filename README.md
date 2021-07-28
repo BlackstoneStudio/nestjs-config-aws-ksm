@@ -10,7 +10,7 @@
 
 <div align="center">
   <a href="https://nestjs.com" target="_blank">
-    <img src="https://img.shields.io/badge/built%20with-NestJs-red.svg" alt="Built with NestJS">
+    <img src="https://img.shields.io/badge/Module%20of-NestJs-red.svg" alt="Built with NestJS">
   </a>
 </div>
 
@@ -19,7 +19,7 @@
 1 Add module to project.
 
 ```bash
-	npm install nestjs-config-aws-ksm
+npm install nestjs-config-aws-ksm
 ```
 2 Import `ConfigModule` in your module.
 ```ts
