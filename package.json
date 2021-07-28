@@ -1,6 +1,6 @@
 {
   "name": "nestjs-config-aws-ksm",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Library of NESTJS, use config module with AWS Secret Manager.",
   "main": "dist/index",
   "types": "dist/index",
