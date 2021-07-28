@@ -31,7 +31,7 @@ export class ConfigService {
   }
 
   get(key: string): string {
-    if (this.secrets) {
+    if (this.secrets[key]) {
       return this.secrets[key];
     }
     return process.env[key];
