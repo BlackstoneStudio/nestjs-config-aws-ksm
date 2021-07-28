@@ -14,13 +14,47 @@
   </a>
 </div>
 
-### Installation
+## Installation
 
-1. npm i nestjs-config-aws-ksm
-2. Import ConfigModule in your module.
-3. Initialize method register.
-4. Import and use ConfigService.
+1 Add module to project.
 
+```bash
+	npm install nestjs-config-aws-ksm
+```
+2 Import `ConfigModule` in your module.
+```ts
+import { Module } from '@nestjs/common';
+import { ConfigModule } from 'nestjs-config-aws-ksm';
+import { NameService } from './name.service';
+
+@Module({
+    imports: [
+    	ConfigModule.register({
+    		accessKey: 'AWS_ACCESS_KEY',
+    		secretAccessKey: 'AWS_ACCESS_SECRET_KEY',
+    		region: 'AWS_REGION',
+    		storage: 'STORAGE_NAME'
+    	}),
+    ],
+    providers: :[NameService],
+    exports: [NameService],
+})
+
+export class NameModule {}
+```
+3 Import and use `ConfigService` in your Service.
+```
+import { Injectable } from "@nestjs/common";
+import { ConfigService } from "nestjs-config-aws-ksm";
+
+@Injectable()
+export class NameService {
+
+  constructor(configService: ConfigService) {
+    configService.get("SECRET_AWS_OR_ENV_VARIABLE");
+  }
+}
+```
 ## Author
 
 **Blackstone Studio**
