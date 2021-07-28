@@ -22,7 +22,7 @@ describe('AddressService', () => {
   });
 
   it('Verify Example var.', async () => {
-    const secret = await service.getSecret('EXAMPLE');
+    const secret = service.get('EXAMPLE');
     expect(secret).toBe('EXAMPLE');
   });
 });
