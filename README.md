@@ -16,10 +16,10 @@
 
 ### Installation
 
-1. npm i name
-2. Import configModule in your module.
-3. Initialize ith method register.
-4. Import and use configService.
+1. npm i nestjs-config-aws-ksm
+2. Import ConfigModule in your module.
+3. Initialize method register.
+4. Import and use ConfigService.
 
 ## Author
 
